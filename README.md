@@ -57,7 +57,7 @@ O projeto será avaliado segundo:
 
 Descreva a cena que implementaram:
 
-`Descrição`
+`A ideia inicial da cena será fazer um objeto que age como uma fonte de luz pontual orbitar em torno de uma esfera parte dielétrica parte metalica (fazendo uso de um metallicMap)`
 
 (Dica: para incluir imagens, utilize ![](Caminho da imagem))
 
