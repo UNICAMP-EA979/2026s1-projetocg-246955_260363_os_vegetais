@@ -65,4 +65,4 @@ Descreva a cena que implementaram:
 
 Para todo asset que tiver baixado da internet, coloque a referência dele (segundo eterminado por sua licensa):
 
-- `Nome do Asset`: `Licensa` (`Link`)
+- `Metal053C`: `Creative Commons CC0` (`https://ambientcg.com/a/Metal053C`)
