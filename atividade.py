@@ -48,7 +48,7 @@ if __name__ == "__main__":
         renderer, name=NOME_DA_CENA)
 
     # Configuramos a luz ambiente da cena
-    renderer.ambient_color = np.array([0.1, 0.1, 0.1], dtype=np.float32)
+    renderer.ambient_color = np.array([0.3, 0.3, 0.3], dtype=np.float32)
 
     # Carregamos o shader e texturas
     shader = urenderer.renderer.Shader(
@@ -61,17 +61,24 @@ if __name__ == "__main__":
                            GL.GL_RGB, GL.GL_RGB)
     blackTexture = Texture(np.zeros((1, 1, 3), np.uint8),
                            GL.GL_RGB, GL.GL_RGB)
+    
+    rockBasecolor = Texture.load_file("assets/Rock035_1K-JPG/Rock035_1K-JPG_Color.jpg",
+                                      srgb=True, drop_alpha=True)
+    rockRoughness = Texture.load_file("assets/Rock035_1K-JPG/Rock035_1K-JPG_Roughness.jpg",
+                                      drop_alpha=True)
 
     materialSphere = Material(shader)
-    materialSphere.set_texture(0, "baseColorTexture", whiteTexture)
+    materialSphere.set_texture(0, "baseColorTexture", rockBasecolor)
     materialSphere.set_texture(1, "metallicTexture", blackTextureR)
-    materialSphere.set_texture(2, "roughnessTexture", whiteTextureR)
+    materialSphere.set_texture(2, "roughnessTexture", rockRoughness)
+    materialSphere.set_uniform("emissionColor", np.array([0.0, 0.0, 0.0], dtype=np.float32))
 
     materialCube = Material(shader)
     materialCube.set_texture(0, "baseColorTexture", whiteTexture)
     materialCube.set_texture(1, "metallicTexture", blackTextureR)
     materialCube.set_texture(2, "roughnessTexture", whiteTextureR)
-
+    materialCube.set_uniform("emissionColor", np.array([0.5, 0.5, 0.5], dtype=np.float32))
+    
     '''
     metalBaseColor = Texture.load_file("materials/Metal048A_1K-JPG/Metal048A_1K-JPG_Color.jpg",
                                        srgb=True, drop_alpha=True)

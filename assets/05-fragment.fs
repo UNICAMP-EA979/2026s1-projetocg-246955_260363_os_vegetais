@@ -15,6 +15,7 @@ in vec3 worldNormal;
 in vec2 uv;
 
 uniform vec3 ambientColor;
+uniform vec3 emissionColor = vec3(0.0);
 uniform sampler2D baseColorTexture;
 uniform sampler2D metallicTexture;
 uniform sampler2D roughnessTexture;
@@ -41,6 +42,7 @@ void main()
     float roughness = texture(roughnessTexture, uvTiling).r;
 
     vec3 color = vec3(0);
+    color += emissionColor;
 
     // Calcule a luz ambiente
     vec3 ambientLightContribution = baseColor * ambientColor * (1.0 - metallic);
