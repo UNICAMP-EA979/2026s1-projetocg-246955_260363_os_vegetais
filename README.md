@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24208545&assignment_repo_type=AssignmentRepo)
 # Projeto de CG - Cena
 
 Vamos utilizar o renderizador implementado nas tarefas anteriores para renderizar uma cena.
@@ -56,7 +57,7 @@ O projeto será avaliado segundo:
 
 Descreva a cena que implementaram:
 
-`Descrição`
+`A ideia inicial da cena será fazer um objeto que age como uma fonte de luz pontual orbitar em torno de uma esfera parte dielétrica parte metalica (fazendo uso de um metallicMap)`
 
 (Dica: para incluir imagens, utilize ![](Caminho da imagem))
 
@@ -64,4 +65,4 @@ Descreva a cena que implementaram:
 
 Para todo asset que tiver baixado da internet, coloque a referência dele (segundo eterminado por sua licensa):
 
-- `Nome do Asset`: `Licensa` (`Link`)
+- `Metal053C`: `Creative Commons CC0` (`https://ambientcg.com/a/Metal053C`)
